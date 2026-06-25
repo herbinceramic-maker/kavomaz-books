@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://books.kavomaz.com/affiliate-disclosure.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/affiliate.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-anxiety.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-burnout.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-overthinking.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-journals-for-overthinking.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-reading-tools-for-self-help-books.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/affiliate/best-self-help-books.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/anxiety/best-books-for-anxiety-and-mental-clarity.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/burnout/best-books-for-burnout-recovery.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog//</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/overthinking/best-books-for-overthinking-at-night.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/blog/procrastination/best-books-for-procrastination-and-avoidance.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/barnaby-and-the-cloud-that-wouldnt-move.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/how-to-stop-overthinking-at-night.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/noel-the-snowmans-christmas-eve.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/ollie-the-reindeer-the-first-flight.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/pips-perfectly-imperfect-nest.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/the-boy-who-lived-in-a-box.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/the-cloud-who-held-it-all-in.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/the-little-elf-who-said-thank-you.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/the-woodland-express-christmas.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/youre-not-broken-youre-exhausted.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/books/youre-not-lazy-youre-avoiding-pain.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com//</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/kids.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/life.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://books.kavomaz.com/privacy-policy.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://books.kavomaz.com/terms.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://books.kavomaz.com/affiliate-disclosure.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/affiliate.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-anxiety.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-burnout.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-books-for-overthinking.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-journals-for-overthinking.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-reading-tools-for-self-help-books.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/affiliate/best-self-help-books.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/anxiety/best-books-for-anxiety-and-mental-clarity.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/burnout/best-books-for-burnout-recovery.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog//</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/overthinking/best-books-for-overthinking-at-night.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/blog/procrastination/best-books-for-procrastination-and-avoidance.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/barnaby-and-the-cloud-that-wouldnt-move.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/how-to-stop-overthinking-at-night.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/noel-the-snowmans-christmas-eve.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/ollie-the-reindeer-the-first-flight.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/pips-perfectly-imperfect-nest.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/the-boy-who-lived-in-a-box.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/the-cloud-who-held-it-all-in.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/the-little-elf-who-said-thank-you.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/the-woodland-express-christmas.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/youre-not-broken-youre-exhausted.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/books/youre-not-lazy-youre-avoiding-pain.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com//</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/kids.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/life.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/privacy-policy.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/terms.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/about.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://books.kavomaz.com/newsletter.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>https://books.kavomaz.com/cookie-policy.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/editorial-policy.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+<url><loc>https://books.kavomaz.com/review-policy.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
 </urlset>

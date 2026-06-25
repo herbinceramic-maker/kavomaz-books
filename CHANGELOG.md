@@ -24,3 +24,11 @@
 - Added affiliate_hub_view tracking event.
 - Updated sitemap and navigation.
 - Added AFFILIATE-SETUP.md.
+
+
+## V5.1 Global Authority Trust Update
+- Added Cookie Policy, Editorial Policy, Review Policy, About, and Newsletter pages.
+- Added cookie consent banner and cookie settings support.
+- Expanded Privacy Policy, Terms, Affiliate Disclosure, and Contact page.
+- Added newsletter capture fallback for static GitHub Pages.
+- Updated footer, navigation, sitemap, and tracking events.

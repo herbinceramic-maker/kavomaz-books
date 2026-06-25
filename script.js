@@ -112,3 +112,47 @@
     pushEvent('affiliate_hub_view', { affiliate_page_type: pagePath.includes('/blog/affiliate/') ? 'money_article' : 'hub' });
   }
 })();
+
+
+/* v5.1 Cookie consent and newsletter capture */
+(function(){
+  'use strict';
+  const STORAGE_KEY='kavomaz_books_cookie_choice_v1';
+  const tracking=window.KavomazBooksTracking;
+  function push(eventName, params){
+    if(tracking && typeof tracking.pushEvent==='function') tracking.pushEvent(eventName, params||{});
+    else { window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:eventName, ...(params||{})}); }
+  }
+  function buildBanner(){
+    if(document.querySelector('.cookie-banner')) return;
+    const banner=document.createElement('section');
+    banner.className='cookie-banner';
+    banner.setAttribute('role','dialog');
+    banner.setAttribute('aria-live','polite');
+    banner.setAttribute('aria-label','Cookie notice');
+    banner.innerHTML='<div><strong>Kavomaz Books uses cookies</strong><p>We use essential cookies plus optional analytics, affiliate, and future advertising measurement cookies to improve the site and track partner links. You can accept or decline optional cookies.</p></div><div class="cookie-actions"><button class="btn btn-secondary" type="button" data-cookie-decline>Decline optional</button><button class="btn btn-primary" type="button" data-cookie-accept>Accept cookies</button><a class="btn btn-secondary" href="/cookie-policy.html">Cookie Policy</a></div>';
+    document.body.appendChild(banner);
+    const choice=localStorage.getItem(STORAGE_KEY);
+    if(!choice) banner.classList.add('show');
+    banner.querySelector('[data-cookie-accept]').addEventListener('click', function(){localStorage.setItem(STORAGE_KEY,'accepted');banner.classList.remove('show');push('cookie_consent_update',{cookie_choice:'accepted'});});
+    banner.querySelector('[data-cookie-decline]').addEventListener('click', function(){localStorage.setItem(STORAGE_KEY,'declined');banner.classList.remove('show');push('cookie_consent_update',{cookie_choice:'declined'});});
+  }
+  document.addEventListener('DOMContentLoaded', buildBanner);
+  document.addEventListener('click', function(e){
+    const target=e.target.closest('[data-open-cookie-settings], .cookie-settings-link');
+    if(!target) return;
+    e.preventDefault();
+    localStorage.removeItem(STORAGE_KEY); buildBanner(); document.querySelector('.cookie-banner')?.classList.add('show');
+  });
+  document.addEventListener('submit', function(e){
+    const form=e.target.closest('[data-newsletter-form]');
+    if(!form) return;
+    e.preventDefault();
+    const email=(form.querySelector('input[type="email"]')?.value||'').trim();
+    if(!email) return;
+    push('newsletter_signup',{signup_source:window.location.pathname,email_domain:(email.split('@')[1]||'').toLowerCase()});
+    const subject=encodeURIComponent('Kavomaz Books Newsletter Subscription');
+    const body=encodeURIComponent('Please add this email to the Kavomaz Books newsletter: '+email);
+    window.location.href='mailto:books@kavomaz.com?subject='+subject+'&body='+body;
+  });
+})();
