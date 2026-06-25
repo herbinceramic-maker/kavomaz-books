@@ -32,3 +32,11 @@
 - Expanded Privacy Policy, Terms, Affiliate Disclosure, and Contact page.
 - Added newsletter capture fallback for static GitHub Pages.
 - Updated footer, navigation, sitemap, and tracking events.
+
+
+## V5.1 FINAL Pre-Affiliate Ready rebuild
+- Added visible Newsletter link to the main navigation across all public HTML pages.
+- Confirmed Newsletter section exists on homepage before the final contact CTA.
+- Confirmed dedicated newsletter.html page exists with subscribe form.
+- Confirmed Newsletter link exists in footer.
+- Confirmed cookie banner and cookie policy structure are included.
