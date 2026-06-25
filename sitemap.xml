@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://books.kavomaz.com/</loc>
-  </url>
-  <url>
-    <loc>https://books.kavomaz.com/life.html</loc>
-  </url>
-  <url>
-    <loc>https://books.kavomaz.com/kids.html</loc>
-  </url>
+  <url><loc>https://books.kavomaz.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://books.kavomaz.com/life.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/kids.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/affiliate-disclosure.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/privacy-policy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/terms.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/blog/overthinking/best-books-for-overthinking-at-night.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/blog/burnout/best-books-for-burnout-recovery.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/blog/procrastination/best-books-for-procrastination-and-avoidance.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://books.kavomaz.com/blog/anxiety/best-books-for-anxiety-and-mental-clarity.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
