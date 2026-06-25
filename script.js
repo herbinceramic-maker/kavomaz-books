@@ -108,4 +108,7 @@
 
   window.KavomazBooksTracking = Object.freeze({ pushEvent, GTM_ID });
   pushEvent('page_ready', { content_group: document.body.dataset.section || 'kavomaz_books' });
+  if (pagePath.includes('/affiliate') || pagePath.includes('/blog/affiliate/')) {
+    pushEvent('affiliate_hub_view', { affiliate_page_type: pagePath.includes('/blog/affiliate/') ? 'money_article' : 'hub' });
+  }
 })();

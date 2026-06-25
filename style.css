@@ -24,3 +24,10 @@ main{display:block}.hero-copy,.section-head,.book-card,.topic-card,.partner-card
 @media(max-width:850px){.hero-media img{aspect-ratio:auto}.book-card{width:100%}.book-actions .btn{min-width:120px}.trust-strip{justify-content:flex-start}.trust-strip span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px}.cards{display:grid}.topic-card{width:100%}}
 @media(max-width:520px){.hero-actions,.book-actions{display:grid;grid-template-columns:1fr;align-items:stretch}.hero-actions .btn,.book-actions .btn{width:100%}.book-card h3{font-size:1.15rem}.kids-catalog .book-card img,.book-grid.four .book-card img{width:100%;height:220px;max-height:220px;object-fit:contain}.site-footer{padding-left:4vw;padding-right:4vw}.footer-links{flex-direction:column}}
 @media(max-width:340px){.brand strong{max-width:118px}.kids-catalog .book-card img,.book-grid.four .book-card img{height:190px;max-height:190px}.btn{font-size:.94rem;padding-left:12px;padding-right:12px}}
+
+
+/* v5 Global Authority & Affiliate Enterprise */
+.affiliate-banner{display:flex;align-items:center;justify-content:space-between;gap:22px;background:linear-gradient(135deg,#fff8ec,#eef7f5);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.affiliate-banner>div{max-width:760px}.partner-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.partner-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;display:flex;flex-direction:column;gap:10px}.partner-card h3{margin:0}.partner-card .btn{margin-top:auto}.disclosure-note{background:#fff8ec;border:1px solid var(--line);border-radius:16px;padding:14px 16px}.btn-small{padding:9px 14px;font-size:.9rem}.article ul{padding-left:1.3rem}.article li{margin:.4rem 0}
+@media(max-width:900px){.partner-grid{grid-template-columns:1fr 1fr}.affiliate-banner{display:block}.affiliate-banner .btn{margin-top:14px}}
+@media(max-width:620px){.partner-grid{grid-template-columns:1fr}.affiliate-banner{padding:22px}.article table .btn-small{width:100%}}
