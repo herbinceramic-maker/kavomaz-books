@@ -1,19 +1,7 @@
-# QA Checklist — V4 Enterprise Edition
+# QA Checklist
 
-## Static QA Passed
-- [x] 23 HTML files found and checked.
-- [x] GTM container appears exactly twice per HTML page: head script + body noscript.
-- [x] Required SEO tags are present.
-- [x] JSON-LD is valid JSON.
-- [x] Local image paths exist.
-- [x] Image alt text exists.
-- [x] Internal links resolve to existing files.
-- [x] Main content landmark exists.
-
-## Live QA Needed After Upload
-- [ ] GTM Preview Mode fires page_view and custom events.
-- [ ] GA4 Realtime sees traffic.
-- [ ] Microsoft Clarity records sessions after tag is added in GTM.
-- [ ] Google Search Console indexes submitted pages.
-- [ ] PageSpeed Insights confirms Core Web Vitals targets.
-- [ ] Rich Results Test validates schema on live URLs.
+- Upload the full folder contents to the GitHub repository root.
+- Confirm /sitemap.xml and /robots.txt open on the live domain.
+- Submit sitemap.xml in Google Search Console and Bing Webmaster Tools.
+- Test all main navigation, footer links, Amazon buttons, sample PDF, newsletter mailto flow, and contact mailto flow.
+- Connect MailerLite/Brevo/ConvertKit/Beehiiv when ready for automatic newsletter storage.
