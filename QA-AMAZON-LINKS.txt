@@ -1,0 +1,18 @@
+Kavomaz Books V6.3 Enterprise Final - Link Safe Polish
+
+Base: user-uploaded kavomaz-books-v6-enterprise-final(1).zip
+
+Applied:
+- Removed internal/development wording from FAQ, Affiliate Hub, Kids, Newsletter, Reading Tools and Journals.
+- Rewrote FAQ wording for normal readers.
+- Changed Reading Tools and Journals from sales-style affiliate pages into softer reader-first routine guides.
+- Removed tool/journal search-link buttons from those two pages to avoid pushing products before affiliate approval.
+- Preserved Kavomaz book Amazon ASIN links from the uploaded base version.
+- Preserved other book comparison Amazon search links from the uploaded base version.
+- Cleaned button labels: no Check price / Learn track / Created.
+- Reduced headline, table, and button sizing in CSS.
+- Validated internal links and image paths.
+- Validated JSON-LD syntax.
+
+Note:
+Amazon live availability was not changed in this package. The uploaded base version was treated as the source of truth for Amazon URLs so previously correct links would not be broken again.
