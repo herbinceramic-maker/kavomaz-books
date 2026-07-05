@@ -1,2 +1,2 @@
-KAI-OS v6.5 rebuild trigger
-2026-07-05T08:07:14.527600+00:00
+KAI-OS v6.7 rebuild trigger
+2026-07-05T08:18:08.342378+00:00
