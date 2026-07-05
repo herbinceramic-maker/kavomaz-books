@@ -1,3 +1,2 @@
-KAI-OS v6 Pages rebuild trigger
-2026-07-05 07:01:12 UTC
-Article: blog/index.html
+KAI-OS v6.5 rebuild trigger
+2026-07-05T08:07:14.527600+00:00
