@@ -1,3 +1,3 @@
 KAI-OS v6 Pages rebuild trigger
-2026-07-22 12:34:13 UTC
-Article: blog/kai-os/kavomaz-life-article.html
+2026-07-22 12:34:21 UTC
+Article: blog/index.html
