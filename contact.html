@@ -59,7 +59,15 @@ gtag('consent', 'default', {
   <nav class="nav" aria-label="Main navigation"><a href="/" class="" >Home</a><a href="/about.html" class="" >About</a><a href="/life.html" class="" >Kavomaz Life</a><a href="/blog/" class="" >Blog</a><a href="/affiliate.html" class="" >Affiliate Hub</a><a href="/kids.html" class="" >Kids</a><a href="/newsletter.html" class="" >Newsletter</a><a href="/contact.html" class="active" aria-current="page">Contact</a></nav>
 </header>
 <main id="main-content">
-<section class="page-hero"><p class="eyebrow">Kavomaz Books</p><h1>Contact Kavomaz Books</h1><p class="lead">For media requests, collaborations, rights questions, affiliate partnerships, sample requests, newsletter questions, or press inquiries, contact Kavomaz Books at <a href="mailto:books@kavomaz.com">books@kavomaz.com</a>.</p><div class="hero-actions"><a class="btn btn-primary js-track" href="mailto:books@kavomaz.com?subject=Kavomaz%20Books%20Inquiry" data-event="contact_click">Email Kavomaz Books</a></div></section>
+<section class="page-hero"><p class="eyebrow">Kavomaz Books</p><h1>Contact Kavomaz Books</h1><p class="lead">For media requests, collaborations, rights questions, affiliate partnerships, sample requests, newsletter questions, or press inquiries, contact Kavomaz Books at <a href="mailto:books@kavomaz.com">books@kavomaz.com</a>.</p><!-- KAIOS-CONTACT-GMAIL-COPY-START -->
+<div class="hero-actions">
+  <a class="btn btn-primary js-track"
+     href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=books%40kavomaz.com&amp;su=Kavomaz%20Books%20Inquiry"
+     target="_blank" rel="noopener noreferrer" data-event="contact_gmail_click">Open Gmail</a>
+  <button class="btn" type="button" id="copy-books-email">Copy email address</button>
+  <span id="copy-books-email-status" class="form-note" role="status" aria-live="polite"></span>
+</div>
+<!-- KAIOS-CONTACT-GMAIL-COPY-END --></section>
 <section class="section"><div class="contact-options"><p><strong>Media requests:</strong> books, audiobooks, journals, and learning tools relevant to self-help readers.</p><p><strong>Rights and publishing:</strong> translation, licensing, international editions, or distribution questions.</p><p><strong>Affiliate partnerships:</strong> book platforms, productivity tools, journals, reading products, and education offers.</p></div></section>
 </main>
 <footer class="site-footer">
@@ -71,5 +79,32 @@ gtag('consent', 'default', {
 </footer>
 <script defer src="/script.js"></script>
   <script defer src="/assets/js/kai-retargeting-events.js" data-kai-retargeting-foundation="v1"></script>
+<!-- KAIOS-CONTACT-COPY-SCRIPT-START -->
+<script>
+(function () {
+  var button = document.getElementById('copy-books-email');
+  var status = document.getElementById('copy-books-email-status');
+  if (!button) return;
+  button.addEventListener('click', async function () {
+    var email = 'books@kavomaz.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      status.textContent = 'Email address copied.';
+    } catch (error) {
+      var box = document.createElement('textarea');
+      box.value = email;
+      box.setAttribute('readonly', '');
+      box.style.position = 'fixed';
+      box.style.opacity = '0';
+      document.body.appendChild(box);
+      box.select();
+      document.execCommand('copy');
+      document.body.removeChild(box);
+      status.textContent = 'Email address copied.';
+    }
+  });
+})();
+</script>
+<!-- KAIOS-CONTACT-COPY-SCRIPT-END -->
 </body>
 </html>
