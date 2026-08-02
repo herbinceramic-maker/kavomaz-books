@@ -1,14 +1,2 @@
-
-.kai-books-life,.kai-books-kids{overflow-x:clip}
-.kai-books-life main,.kai-books-kids main{min-width:0}
-.kai-books-life img,.kai-books-kids img{max-width:100%;height:auto}
-.kai-books-life :where(h1,h2,h3,p,li),.kai-books-kids :where(h1,h2,h3,p,li){overflow-wrap:anywhere}
-.kai-books-life :focus-visible,.kai-books-kids :focus-visible{outline:3px solid currentColor;outline-offset:3px}
-.kai-books-life article,.kai-books-kids article{max-width:74rem;margin-inline:auto}
-.kai-books-life article p,.kai-books-kids article p{line-height:1.75}
-.kai-books-kids{--kai-kids-radius:18px}
-.kai-books-kids :where(.card,.book-card,.article-card){border-radius:var(--kai-kids-radius)}
-@media(max-width:720px){
- .kai-books-life :where(a,button,input,select,textarea),
- .kai-books-kids :where(a,button,input,select,textarea){min-height:44px}
-}
+/* Emergency neutralization: cached pages may still request this file. */
+html, body { max-width: 100%; }
