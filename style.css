@@ -210,3 +210,21 @@ body[data-section="contact"] .contact-options .cards { align-items:stretch; }
   [data-kaios-chapter="18.2"] ul{grid-template-columns:1fr!important;}
 }
 /* KAI_OS_BOOKS_CONTENT_VISUAL_PREVIEW_V1_END */
+/* KAI_OS_BOOKS_TEXT_SEO_PREVIEW_V1_BEGIN
+   Small visible-credit and umbrella-note styling for the approved rewrite preview. */
+.kai-umbrella-note {
+  max-width:64ch;
+  margin:.85rem 0 0;
+  color:#526077;
+  font-size:.96rem;
+  line-height:1.65;
+}
+.book-credit {
+  margin:.7rem 0 0;
+  color:#526077;
+  font-size:.88rem!important;
+  line-height:1.5!important;
+  font-weight:700;
+}
+body[data-kai-page-type="kids-book"] .book-credit { color:#27647d; }
+/* KAI_OS_BOOKS_TEXT_SEO_PREVIEW_V1_END */
