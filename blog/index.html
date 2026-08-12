@@ -285,6 +285,139 @@ document.addEventListener("DOMContentLoaded",function(){
   ordered.forEach(card=>grid.appendChild(card));
 });
 </script>
+<style data-kai-global-card-date-normalizer="v6">
+.kai-date-normalized-v6{display:block;margin-top:.65rem}
+</style>
+<script data-kai-global-card-date-normalizer="v6">
+document.addEventListener("DOMContentLoaded",function(){
+  const ISO=/^\d{4}-\d{2}-\d{2}$/;
+
+  const exactDate=el=>{
+    if(!el)return "";
+    if(el.matches&&el.matches("time[datetime]")){
+      const d=(el.getAttribute("datetime")||"").slice(0,10);
+      return ISO.test(d)?d:"";
+    }
+    const t=el.querySelector&&el.querySelector("time[datetime]");
+    if(t){
+      const d=(t.getAttribute("datetime")||"").slice(0,10);
+      if(ISO.test(d))return d;
+    }
+    const txt=(el.textContent||"").trim();
+    return ISO.test(txt)?txt:"";
+  };
+
+  const isReadControl=el=>
+    el&&/read(?:\s+the)?\s+guide/i.test((el.textContent||"").trim());
+
+  const cards=[];
+  document.querySelectorAll("a.topic-card,article.blog-card,article.guide-card,article.article-card")
+    .forEach(el=>cards.push(el));
+
+  document.querySelectorAll("main article").forEach(el=>{
+    if(cards.includes(el))return;
+    if(!el.querySelector("h2,h3"))return;
+    if(![...el.querySelectorAll("a,button")].some(isReadControl))return;
+    cards.push(el);
+  });
+
+  // Also detect direct children of common blog grids when class names differ.
+  document.querySelectorAll(".blog-grid,.cards,.guides-grid,.article-grid").forEach(grid=>{
+    [...grid.children].forEach(el=>{
+      if(cards.includes(el))return;
+      if(!el.querySelector||!el.querySelector("h2,h3"))return;
+      if(![...el.querySelectorAll("a,button")].some(isReadControl))return;
+      cards.push(el);
+    });
+  });
+
+  cards.forEach(card=>{
+    const found=[];
+
+    card.querySelectorAll(
+      "time[datetime],.kai-card-date,.card-date,.article-date,.post-date,.date"
+    ).forEach(el=>{
+      const d=exactDate(el);
+      if(d)found.push({el,d});
+    });
+
+    card.querySelectorAll("div,p,span,small").forEach(el=>{
+      const d=exactDate(el);
+      if(d&&!found.some(x=>x.el===el))found.push({el,d});
+    });
+
+    // If the card itself has no date, inspect adjacent orphan date siblings.
+    if(!found.length){
+      for(const sib of [card.previousElementSibling,card.nextElementSibling]){
+        const d=exactDate(sib);
+        if(d)found.push({el:sib,d,orphan:true});
+      }
+    }
+
+    if(!found.length)return;
+    const date=found.map(x=>x.d).sort().pop();
+
+    // Remove all date-only nodes from inside the card.
+    const toRemove=new Set();
+    found.forEach(({el,orphan})=>{
+      if(!el)return;
+      if(orphan){toRemove.add(el);return}
+      let target=el;
+      const parent=el.parentElement;
+      if(parent&&parent!==card&&exactDate(parent))target=parent;
+      toRemove.add(target);
+    });
+    toRemove.forEach(el=>{
+      if(el&&el!==card)el.remove();
+    });
+
+    const wrap=document.createElement("div");
+    wrap.className="kai-card-date kai-date-normalized-v6";
+    const time=document.createElement("time");
+    time.setAttribute("datetime",date);
+    time.textContent=date;
+    wrap.appendChild(time);
+
+    const read=[...card.querySelectorAll("a,button")].find(isReadControl);
+    if(read)card.insertBefore(wrap,read);
+    else card.appendChild(wrap);
+  });
+
+  // Remove orphan date siblings when the same date is already inside a card.
+  const parents=[...new Set(cards.map(c=>c.parentElement).filter(Boolean))];
+  parents.forEach(parent=>{
+    const known=new Set(
+      cards.filter(c=>c.parentElement===parent).map(card=>{
+        const t=card.querySelector("time[datetime]");
+        return t?(t.getAttribute("datetime")||"").slice(0,10):"";
+      }).filter(d=>ISO.test(d))
+    );
+
+    [...parent.childNodes].forEach(node=>{
+      if(node.nodeType===Node.TEXT_NODE){
+        const d=(node.textContent||"").trim();
+        if(ISO.test(d)&&known.has(d))node.remove();
+        return;
+      }
+      if(node.nodeType!==Node.ELEMENT_NODE)return;
+      if(cards.includes(node))return;
+      const d=exactDate(node);
+      if(d&&known.has(d))node.remove();
+    });
+
+    // Sort only real cards, newest first.
+    const ordered=cards.filter(c=>c.parentElement===parent);
+    ordered.sort((a,b)=>{
+      const at=a.querySelector("time[datetime]");
+      const bt=b.querySelector("time[datetime]");
+      const av=at?(at.getAttribute("datetime")||"").slice(0,10):"";
+      const bv=bt?(bt.getAttribute("datetime")||"").slice(0,10):"";
+      return bv.localeCompare(av);
+    });
+    ordered.forEach(card=>parent.appendChild(card));
+  });
+});
+</script>
 </body>
 </html>
 <!-- KAI-OS-BLOG-INDEX-TOUCH: 2026-07-04 05:57:14 UTC -->
