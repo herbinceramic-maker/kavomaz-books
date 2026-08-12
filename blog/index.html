@@ -233,6 +233,58 @@ document.addEventListener("DOMContentLoaded",function(){
   cards.forEach(el=>grid.appendChild(el));
 });
 </script>
+<style data-kai-books-orphan-date-guard="v4">
+#priority-guides .cards > .kai-card-date,
+#priority-guides .cards > time[datetime]{
+  display:none!important;
+}
+#priority-guides .cards > a.topic-card .kai-card-date,
+#priority-guides .cards > a.topic-card time[datetime]{
+  display:block!important;
+}
+</style>
+<script data-kai-books-orphan-date-guard="v4">
+document.addEventListener("DOMContentLoaded",function(){
+  const grid=document.querySelector("#priority-guides .cards");
+  if(!grid)return;
+
+  const iso=/^\d{4}-\d{2}-\d{2}$/;
+  const cards=[...grid.children].filter(el=>el.matches("a.topic-card"));
+  const dates=new Set(cards.map(card=>{
+    const t=card.querySelector("time[datetime]");
+    return t ? (t.getAttribute("datetime")||"").slice(0,10) : "";
+  }).filter(Boolean));
+
+  [...grid.childNodes].forEach(node=>{
+    if(node.nodeType===Node.TEXT_NODE){
+      const v=(node.textContent||"").trim();
+      if(iso.test(v) && dates.has(v)) node.remove();
+      return;
+    }
+    if(node.nodeType!==Node.ELEMENT_NODE) return;
+    if(node.matches("a.topic-card")) return;
+
+    let v="";
+    const t=node.matches("time[datetime]") ? node : node.querySelector("time[datetime]");
+    if(t) v=(t.getAttribute("datetime")||"").slice(0,10);
+    if(!v){
+      const txt=(node.textContent||"").trim();
+      if(iso.test(txt)) v=txt;
+    }
+    if(v && dates.has(v)) node.remove();
+  });
+
+  const ordered=[...grid.children].filter(el=>el.matches("a.topic-card"));
+  ordered.sort((a,b)=>{
+    const at=a.querySelector("time[datetime]");
+    const bt=b.querySelector("time[datetime]");
+    const av=at ? (at.getAttribute("datetime")||"").slice(0,10) : "";
+    const bv=bt ? (bt.getAttribute("datetime")||"").slice(0,10) : "";
+    return bv.localeCompare(av);
+  });
+  ordered.forEach(card=>grid.appendChild(card));
+});
+</script>
 </body>
 </html>
 <!-- KAI-OS-BLOG-INDEX-TOUCH: 2026-07-04 05:57:14 UTC -->
