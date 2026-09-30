@@ -105,3 +105,27 @@ jobs:
           path: books-pre-visual-refresh-20260930.zip.part-aj
           if-no-files-found: ignore
           retention-days: 30
+
+      - name: Upload backup part ak
+        uses: actions/upload-artifact@v4
+        with:
+          name: books-pre-visual-refresh-20260930-part-ak
+          path: books-pre-visual-refresh-20260930.zip.part-ak
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part al
+        uses: actions/upload-artifact@v4
+        with:
+          name: books-pre-visual-refresh-20260930-part-al
+          path: books-pre-visual-refresh-20260930.zip.part-al
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Upload backup part am
+        uses: actions/upload-artifact@v4
+        with:
+          name: books-pre-visual-refresh-20260930-part-am
+          path: books-pre-visual-refresh-20260930.zip.part-am
+          if-no-files-found: ignore
+          retention-days: 30
