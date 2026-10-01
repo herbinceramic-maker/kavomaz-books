@@ -1,0 +1,52 @@
+
+/* KAVOMAZ Books — Redesign V3 — DRAFT ONLY */
+:root{--b3-bg:#f4efe6;--b3-card:#fffaf1;--b3-ink:#192235;--b3-muted:#6f746e;--b3-gold:#e5b753;--b3-life:#22394a;--b3-kids:#b65f43;--b3-line:rgba(28,35,48,.11);--b3-shadow:0 22px 56px rgba(30,34,42,.10);--b3-radius:24px}
+body.v3-site{background:var(--b3-bg);color:var(--b3-ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body.v3-site h1,body.v3-site h2,body.v3-site h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.035em}
+body.v3-site .site-header{position:relative;z-index:40;background:rgba(255,250,241,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--b3-line)}
+body.v3-site .brand strong{font-size:1.05rem}body.v3-site .brand small{color:#7e8490}
+body.v3-site .nav a{border-radius:999px;padding:.65rem .8rem;font-weight:650}
+body.v3-site .nav a.active{background:#fff}
+body.v3-site .btn{border-radius:999px;font-weight:760}
+body.v3-site .btn-primary{background:var(--b3-gold);border-color:var(--b3-gold);color:#172136}
+body.v3-site .section{width:min(1340px,92%);margin:auto;padding:72px 0}
+body.v3-site .section-head h2,body.v3-site .section>h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1.02}
+body.v3-site .eyebrow{font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800;color:#31566d}
+body.v3-site .book-grid,body.v3-site .cards{gap:20px}
+body.v3-site .book-card,body.v3-site .topic-card,body.v3-site .card,body.v3-site .two-col,body.v3-site .newsletter-panel,body.v3-site .contact-cta{background:var(--b3-card);border:1px solid var(--b3-line);border-radius:24px;box-shadow:var(--b3-shadow);overflow:hidden}
+body.v3-site .book-card .cover-img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#e8dfd2}
+body.v3-site .book-card-body{padding:24px}
+body.v3-site .book-card h3{font-size:1.7rem;line-height:1.06}
+body.v3-site .badge{background:#f0e0b7;color:#59431c;border-radius:999px}
+body.v3-site .topic-card{padding:26px}
+body.v3-site .two-col{padding:clamp(28px,4vw,52px)}
+body.v3-site .page-hero,body.v3-site .hero.slim{width:100%;max-width:none;margin:0;padding:84px max(5vw,32px);border-radius:0;background:
+linear-gradient(100deg,rgba(29,20,14,.94),rgba(40,28,18,.73)),
+url('/images/life-hero.jpg') center/cover no-repeat;color:#fff;display:block}
+body.v3-site .page-hero h1,body.v3-site .hero.slim h1{font-size:clamp(2.7rem,5vw,5rem);line-height:.97;max-width:900px;color:#fff}
+body.v3-site .page-hero p,body.v3-site .hero.slim .lead{max-width:760px;color:rgba(255,255,255,.82);line-height:1.7}
+body.v3-site .hero.slim .hero-media{display:none}
+body.v3-site.v3-kids .page-hero,body.v3-site.v3-kids .hero.slim{background:linear-gradient(100deg,rgba(54,31,20,.86),rgba(54,31,20,.54)),url('/images/kids-hero.jpg') center/cover no-repeat}
+body.v3-site .site-footer{background:#15191f;color:rgba(255,255,255,.72);padding:54px max(4vw,28px)}
+body.v3-site .site-footer a{color:#fff}
+body.v3-site.v3-home .site-header{position:absolute;inset:0 0 auto;background:transparent;border:0}
+body.v3-site.v3-home .brand strong,body.v3-site.v3-home .brand small,body.v3-site.v3-home .nav a{color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.28)}
+body.v3-site.v3-home .brand img{background:rgba(255,255,255,.88);padding:4px;border-radius:12px}
+body.v3-site.v3-home .hero{position:relative;width:100%;min-height:700px;margin:0;display:flex;align-items:center;padding:140px max(6vw,42px) 120px;overflow:hidden;background:#2a1c12}
+body.v3-site.v3-home .hero-media{position:absolute;inset:0;z-index:0}
+body.v3-site.v3-home .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+body.v3-site.v3-home .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(30,19,11,.94),rgba(35,22,13,.8) 45%,rgba(35,22,13,.32) 73%,rgba(35,22,13,.12))}
+body.v3-site.v3-home .hero-copy{position:relative;z-index:3;max-width:720px;color:#fff}
+body.v3-site.v3-home .hero .eyebrow{color:#f0c96f}
+body.v3-site.v3-home .hero h1{font-size:clamp(3.2rem,6.2vw,6.2rem);line-height:.93;max-width:800px;color:#fff}
+body.v3-site.v3-home .hero .lead,body.v3-site.v3-home .kai-umbrella-note{color:rgba(255,255,255,.82);max-width:620px}
+body.v3-site.v3-home .v3-books-rail{position:absolute;z-index:4;right:max(4vw,30px);top:50%;transform:translateY(-50%);display:grid;gap:14px;width:min(330px,28vw)}
+body.v3-site.v3-home .v3-books-card{display:block;min-height:155px;border-radius:18px;overflow:hidden;position:relative;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,.26);box-shadow:0 18px 44px rgba(0,0,0,.18)}
+body.v3-site.v3-home .v3-books-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,13,9,.04),rgba(18,13,9,.78))}
+body.v3-site.v3-home .v3-books-card span{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff}
+body.v3-site.v3-home .v3-books-card b{display:block;font:600 1.25rem/1.1 Georgia,serif}
+body.v3-site.v3-home .v3-books-card small{color:rgba(255,255,255,.72)}
+body.v3-site.v3-home .trust-strip{width:min(1180px,92%);margin:-30px auto 24px;position:relative;z-index:7;background:#1c2735;color:#fff;border-radius:18px;box-shadow:0 18px 48px rgba(24,31,42,.18);padding:18px;display:grid;grid-template-columns:repeat(5,1fr);text-align:center}
+@media(prefers-reduced-motion:no-preference){body.v3-site .book-card,body.v3-site .topic-card,body.v3-site .v3-books-card{transition:transform .24s ease,box-shadow .24s ease}body.v3-site .book-card:hover,body.v3-site .topic-card:hover,body.v3-site .v3-books-card:hover{transform:translateY(-4px)}}
+@media(max-width:980px){body.v3-site.v3-home .hero{padding-bottom:330px}body.v3-site.v3-home .v3-books-rail{left:5vw;right:5vw;top:auto;bottom:38px;transform:none;width:auto;grid-template-columns:1fr 1fr}body.v3-site.v3-home .trust-strip{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){body.v3-site .section{padding:52px 0}body.v3-site.v3-home .hero{min-height:920px;padding:130px 24px 360px}body.v3-site.v3-home .hero h1{font-size:clamp(2.7rem,13vw,4.6rem)}body.v3-site.v3-home .v3-books-rail{grid-template-columns:1fr;left:20px;right:20px}body.v3-site.v3-home .trust-strip{grid-template-columns:1fr 1fr;margin-top:18px}body.v3-site .page-hero,body.v3-site .hero.slim{padding:60px 24px}}
