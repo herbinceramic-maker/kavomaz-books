@@ -214,25 +214,9 @@ If one answer is no, that is where the last human pass should focus.
 
 ## This is not an argument against AI at work
 
-The point is not to make AI-assisted work slower for the sake of being cautious.
+Good AI use can reduce total work by helping people summarize, compare alternatives, improve organization, challenge assumptions, and reduce repetitive drafting. The standard is whether that efficiency survives the handoff.
 
-Good AI use can reduce total work.
-
-It can help:
-
-- summarize long material,
-- expose contradictions,
-- generate alternatives,
-- improve organization,
-- challenge assumptions,
-- reduce repetitive drafting,
-- make a final deliverable easier to use.
-
-The standard is whether the efficiency survives the handoff.
-
-If you save 30 minutes and the recipient saves 30 minutes too, that is leverage.
-
-If you save 30 minutes and the recipient spends an hour reconstructing what you meant, the work did not disappear. It moved.
+If you save time but the recipient has to reconstruct what you meant, the work did not disappear. It moved.
 
 ## FAQ
 
