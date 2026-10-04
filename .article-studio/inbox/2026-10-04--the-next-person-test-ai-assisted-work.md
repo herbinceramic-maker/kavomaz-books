@@ -84,17 +84,14 @@ Common examples:
 
 - “Where did this number come from?”
 - “Which option are you recommending?”
-- “Is this final or still a draft?”
-- “What changed from the previous version?”
 - “What am I supposed to review?”
 - “Which assumptions are confirmed?”
-- “What is still uncertain?”
 
 If you can predict the question now, you may be able to answer it before sending.
 
 That does not mean making the document longer. Often the best fix is one sentence, a source link, a clear label, or a direct recommendation.
 
-## 3. What will they have to verify?
+### 3. What will they have to verify?
 
 This question matters because fluent AI output can sound more certain than the underlying evidence deserves.
 
@@ -112,7 +109,7 @@ NIST’s Generative AI Profile treats generative-AI risk management as something
 
 A low-stakes rewrite and a board recommendation do not need the same review process.
 
-## 4. What context have I assumed instead of explaining?
+### 4. What context have I assumed instead of explaining?
 
 AI can produce a coherent document from incomplete context.
 
@@ -130,7 +127,7 @@ Before sending, ask whether the recipient knows:
 
 Context does not need to become an essay. But important context should not remain trapped in your head while the document speaks with artificial confidence.
 
-## 5. What decision was I supposed to make that I quietly left for them?
+### 5. What decision was I supposed to make that I quietly left for them?
 
 This is often the most revealing question.
 
