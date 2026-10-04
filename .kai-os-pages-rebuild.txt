@@ -1,3 +1,4 @@
-KAI-OS v6 Pages rebuild trigger
-2026-07-27 13:00:10 UTC
-Article: blog/index.html
+KAI-OS Pages rebuild trigger
+2026-10-04 14:20 UTC
+Reason: publish The Little Social Skills Book and The Last Human Pass
+Pages: index.html, life.html, books/*, samples/*, images/*
