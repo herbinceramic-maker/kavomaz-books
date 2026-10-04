@@ -641,6 +641,17 @@ document.addEventListener("DOMContentLoaded",function(){
   });
 });
 </script>
+<script data-kai-orphan-grid-guard="books-v1">
+document.addEventListener("DOMContentLoaded",function(){
+  const grid=document.querySelector("#priority-guides .cards"); if(!grid)return;
+  document.querySelectorAll("main > article.kaios-article-card").forEach(src=>{
+    const a=src.querySelector("h2 a"),p=src.querySelector("p"),t=src.querySelector("time[datetime]"); if(!a)return;
+    const card=document.createElement("a"); card.className="topic-card kai-os-article-card"; card.href=a.href;
+    card.innerHTML="<span>Kavomaz Life Guide</span><strong>"+a.innerHTML+"</strong><p>"+(p?p.innerHTML:"")+"</p>"+(t?'<time class="kai-card-date" datetime="'+t.getAttribute("datetime")+'">'+t.getAttribute("datetime")+"</time>":"");
+    grid.prepend(card); src.remove();
+  });
+});
+</script>
 </body>
 </html>
 <!-- KAI-OS-BLOG-INDEX-TOUCH: 2026-07-04 05:57:14 UTC -->
