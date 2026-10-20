@@ -1,0 +1,1 @@
+(()=>{const b=document.createElement('div');b.className='v6-staging-banner';b.innerHTML='KAVOMAZ Books V6 staging · noindex · not live · <a href="/topics/index.html">Explore V6</a>';document.body.prepend(b);})();

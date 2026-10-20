@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://books.kavomaz.com/sitemap.xml
+Disallow: /
