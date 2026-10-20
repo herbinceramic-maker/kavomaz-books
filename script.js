@@ -1,3 +1,36 @@
+(function(){'use strict';
+  const AMAZON_ASSOCIATE_TAG='kavomazbooks-20';
+  const AMAZON_DISCLOSURE='As an Amazon Associate I earn from qualifying purchases.';
+  function normalizeAmazonLinks(){
+    const links=Array.from(document.querySelectorAll('a[href*="amazon.com"]'));
+    if(!links.length) return;
+    links.forEach(link=>{
+      try{
+        const url=new URL(link.href,location.href);
+        if(/(^|\.)amazon\.com$/i.test(url.hostname)){
+          url.searchParams.set('tag',AMAZON_ASSOCIATE_TAG);
+          link.setAttribute('href',url.toString());
+        }
+      }catch(err){}
+      const rel=new Set((link.getAttribute('rel')||'').split(/\s+/).filter(Boolean));
+      ['sponsored','nofollow','noopener','noreferrer'].forEach(v=>rel.add(v));
+      link.setAttribute('rel',Array.from(rel).join(' '));
+      link.setAttribute('target','_blank');
+    });
+    if(!document.querySelector('.amazon-associate-disclosure')){
+      const first=links[0];
+      const anchor=first.closest('.table-wrap,.book-actions,.hero-actions,.actions,p')||first;
+      if(anchor.parentNode){
+        const note=document.createElement('p');
+        note.className='disclosure-note amazon-associate-disclosure';
+        note.textContent=AMAZON_DISCLOSURE;
+        anchor.parentNode.insertBefore(note,anchor);
+      }
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',normalizeAmazonLinks);
+  else normalizeAmazonLinks();
+})();
 
 (function(){'use strict';
   const GTM_ID='GTM-KS4JF3BW';
