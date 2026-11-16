@@ -32,8 +32,9 @@
   if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',open?'true':'false');pushEvent('menu_toggle',{state:open?'open':'closed'});}); nav.addEventListener('click',e=>{if(e.target.closest('a')&&innerWidth<=900){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');}});}
   document.addEventListener('click',function(e){const link=e.target.closest('a'); if(!link) return; const raw=link.getAttribute('href')||''; const absolute=link.href||raw; let domain=''; try{domain=new URL(absolute).hostname;}catch(err){}
     const payload={link_url:absolute,link_text:clean(link.textContent),link_label:link.dataset.label||'',product_name:clean(link.dataset.product||link.closest('[data-product]')?.dataset.product||''),partner_name:clean(link.dataset.partner||''),destination_domain:domain};
-    if(link.classList.contains('amazon-link')||/amazon\./i.test(raw)) pushEvent('amazon_click',{...payload,partner_name:'Amazon'});
-    else if(/\/samples\//.test(raw)||/\.pdf($|\?)/i.test(raw)) pushEvent('sample_download',{...payload,file_url:absolute});
+    if(link.classList.contains('amazon-link')||/amazon\./i.test(raw)) {
+      // amazon_click is emitted once by /assets/js/kai-retargeting-events.js.
+    } else if(/\/samples\//.test(raw)||/\.pdf($|\?)/i.test(raw)) pushEvent('sample_download',{...payload,file_url:absolute});
     else if(raw.startsWith('mailto:')) pushEvent('contact_click',{...payload,contact_method:'email'});
     else if(link.classList.contains('js-track')||link.dataset.event) pushEvent(link.dataset.event||'cta_click',payload);
     if(/^https?:\/\//i.test(raw)&&domain&&domain!==location.hostname) pushEvent('external_link_click',payload);
