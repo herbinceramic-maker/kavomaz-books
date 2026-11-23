@@ -44,8 +44,11 @@
 })();
 (function(){'use strict';
   const STORAGE_KEY='kavomaz_books_cookie_choice_v2';
+  const CLARITY_ID='xe1uofdgah';
+  let clarityLoaded=false;
   function push(eventName,params){if(window.KavomazBooksTracking) window.KavomazBooksTracking.pushEvent(eventName,params||{}); else {window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:eventName,...(params||{})});}}
-  function consent(choice){window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};const granted=choice==='accepted';window.gtag('consent','update',{analytics_storage:granted?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted'});}
+  function loadClarity(){if(clarityLoaded)return;clarityLoaded=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script',CLARITY_ID);}
+  function consent(choice){window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};const granted=choice==='accepted';window.gtag('consent','update',{analytics_storage:granted?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',functionality_storage:'granted',security_storage:'granted'});if(granted)loadClarity();}
   function readChoice(){try{return localStorage.getItem(STORAGE_KEY);}catch(err){return null;}}
   function saveChoice(value){try{localStorage.setItem(STORAGE_KEY,value);}catch(err){}}
   const storedChoice=readChoice(); if(storedChoice==='accepted'||storedChoice==='declined') consent(storedChoice);
